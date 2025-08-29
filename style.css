@@ -1,0 +1,99 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex; /* Flexbox for navigation */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main grid layout */
+.grid-container {
+    display: grid; /* CSS Grid for main layout */
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Content section */
+.content {
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+
+.cards {
+    display: flex; /* Flexbox for cards */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    flex: 1;
+    background-color: #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive design with media queries */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack content and sidebar */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards */
+    }
+}
